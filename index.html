@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dinesh Lakhi — Python Developer focused on backend development, Flask, SQL and practical web applications." />
+  <meta name="theme-color" content="#081426" />
+  <title>Dinesh Lakhi | Python Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#07111f;--panel:#0d1b2e;--panel2:#10233a;--text:#eef5ff;--muted:#9aabc2;--blue:#58a6ff;--cyan:#69e0df;--line:rgba(160,190,225,.16);--max:1120px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 5%,rgba(30,99,160,.18),transparent 28%),var(--bg);color:var(--text);font-family:Manrope,Arial,sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{font-weight:800;letter-spacing:-.04em;font-size:1.1rem}.brand span{color:var(--blue)}.navlinks{display:flex;gap:25px;color:var(--muted);font-size:.88rem}.navlinks a:hover{color:var(--text)}
+    .menu{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:10px;padding:8px 12px}
+    .hero{padding:104px 0 92px;display:grid;grid-template-columns:1.3fr .7fr;gap:60px;align-items:center;min-height:570px}
+    .eyebrow,.kicker{font:500 .75rem 'DM Mono',monospace;color:var(--cyan);letter-spacing:.12em;text-transform:uppercase}
+    h1{font-size:clamp(3.1rem,7vw,5.7rem);line-height:1.02;letter-spacing:-.075em;margin:18px 0 16px}h1 span{color:var(--blue)}
+    .role{font-size:clamp(1.15rem,2.5vw,1.55rem);font-weight:700;margin:0 0 14px}.intro{max-width:660px;color:var(--muted);font-size:1.03rem}
+    .actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}.btn{padding:12px 19px;border-radius:9px;font-weight:700;font-size:.9rem;border:1px solid var(--line);display:inline-flex;align-items:center;gap:9px}.primary{background:var(--blue);color:#06111f;border-color:var(--blue)}.btn:hover{transform:translateY(-2px)}
+    .terminal{background:linear-gradient(145deg,#10243c,#091626);border:1px solid rgba(88,166,255,.28);border-radius:18px;box-shadow:0 25px 80px rgba(0,0,0,.3);overflow:hidden;transform:rotate(1.5deg)}
+    .termbar{height:43px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:7px;padding:0 15px}.dot{width:9px;height:9px;border-radius:50%;background:#52708d}.termname{margin-left:auto;color:var(--muted);font: .7rem 'DM Mono',monospace}
+    pre{margin:0;padding:25px 23px 30px;white-space:pre-wrap;font: .82rem/2 'DM Mono',monospace;color:#d7e7fa}.kw{color:#78baff}.fn{color:#72ded6}.str{color:#f3c77b}.comment{color:#7890aa}
+    section{padding:82px 0;border-top:1px solid var(--line)}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:32px}h2{font-size:clamp(2rem,4vw,3rem);letter-spacing:-.06em;line-height:1.1;margin:9px 0 0}.sub{color:var(--muted);max-width:530px;margin:0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.card{background:linear-gradient(145deg,rgba(16,35,58,.88),rgba(10,24,41,.9));border:1px solid var(--line);border-radius:15px;padding:25px}.card p{color:var(--muted);margin:0}.stat{font:500 .75rem 'DM Mono',monospace;color:var(--cyan);margin-bottom:10px}
+    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skillbox h3,.project h3,.experience h3{margin:0 0 12px;font-size:1.02rem}.tags{display:flex;gap:8px;flex-wrap:wrap}.tag{font: .76rem 'DM Mono',monospace;color:#c6d8ee;border:1px solid rgba(120,160,205,.22);background:rgba(30,60,90,.3);padding:7px 10px;border-radius:7px}
+    .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.project{position:relative;min-height:230px}.project .num{font: .75rem 'DM Mono',monospace;color:var(--cyan)}.project p{color:var(--muted);font-size:.94rem}.project .tags{margin-top:18px}
+    .timeline{border-left:1px solid rgba(88,166,255,.4);padding-left:25px;margin-left:8px}.experience{position:relative}.experience:before{content:"";position:absolute;width:10px;height:10px;background:var(--blue);border-radius:50%;left:-31px;top:8px;box-shadow:0 0 0 5px rgba(88,166,255,.12)}.meta{color:var(--cyan);font: .75rem 'DM Mono',monospace;margin-bottom:8px}.experience ul{padding-left:19px;color:var(--muted)}.experience li{margin:7px 0}
+    .edu{display:flex;justify-content:space-between;gap:20px;align-items:center}.edu strong{display:block;font-size:1.08rem}.edu span{color:var(--muted);font-size:.9rem}
+    .contact{background:linear-gradient(130deg,rgba(25,74,117,.3),rgba(10,26,44,.3));border:1px solid rgba(88,166,255,.25);border-radius:18px;padding:35px;display:flex;align-items:center;justify-content:space-between;gap:25px}.contact p{color:var(--muted);margin-bottom:0}
+    footer{padding:27px 0;color:var(--muted);font-size:.8rem;display:flex;justify-content:space-between;gap:15px}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;padding:75px 0;gap:35px}.terminal{max-width:600px}.skills{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr}.navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:#091727;padding:20px;flex-direction:column;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu{display:block}}
+    @media(max-width:560px){.wrap{width:min(var(--max),calc(100% - 28px))}.skills,.project-grid{grid-template-columns:1fr}.section-head,.edu,.contact,footer{align-items:flex-start;flex-direction:column}.hero{min-height:auto}.nav{height:68px}.navlinks{top:68px}section{padding:65px 0}.card{padding:20px}}
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <a class="brand" href="#home">DINESH<span>.</span></a>
+    <nav class="navlinks" id="navlinks">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="menu" id="menu" aria-label="Toggle navigation">Menu</button>
+  </header>
+
+  <main>
+    <div class="wrap hero" id="home">
+      <div>
+        <div class="eyebrow">Python Developer · Haryana, India</div>
+        <h1>Dinesh<br><span>Lakhi.</span></h1>
+        <p class="role">Backend Development &amp; Web Applications</p>
+        <p class="intro">Computer Science graduate focused on Python development, backend engineering and practical web applications. Interested in building useful software through clean code, thoughtful problem-solving and continuous learning.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">Explore my work <span>↗</span></a>
+          <a class="btn" href="mailto:dineshlakhi433@gmail.com">Contact me</a>
+        </div>
+      </div>
+      <div class="terminal" aria-label="Decorative code window">
+        <div class="termbar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span class="termname">developer.py</span></div>
+        <pre><span class="comment"># A little about how I work</span>
+<span class="kw">class</span> <span class="fn">Developer</span>:
+    name = <span class="str">"Dinesh Lakhi"</span>
+    focus = <span class="str">"Python & Backend"</span>
+    tools = [
+      <span class="str">"Flask"</span>, <span class="str">"SQL"</span>,
+      <span class="str">"MySQL"</span>, <span class="str">"MongoDB"</span>
+    ]
+
+    <span class="kw">def</span> <span class="fn">build</span>(self):
+        <span class="kw">return</span> <span class="str">"Useful software"</span></pre>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">01 / About</div><h2>Curious by nature.<br>Developer by practice.</h2></div></div>
+        <div class="about-grid">
+          <article class="card"><div class="stat">PROFILE</div><p>I hold a B.Tech in Computer Science and Engineering with a CGPA of 8.42/10. My interests include Python programming, backend development, database integration and web technologies. I enjoy learning by building and improving practical applications.</p></article>
+          <article class="card"><div class="stat">WHAT I BRING</div><p>Internship exposure to Python and application development, experience contributing to a Q&amp;A platform, and a foundation across frontend, backend and database concepts. I am looking for an entry-level opportunity where I can contribute, learn and grow.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">02 / Toolkit</div><h2>Technologies I work with.</h2></div><p class="sub">A practical toolkit across Python, backend development, databases and web technologies.</p></div>
+        <div class="skills">
+          <article class="card skillbox"><h3>Programming</h3><div class="tags"><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">SQL</span></div></article>
+          <article class="card skillbox"><h3>Backend</h3><div class="tags"><span class="tag">Flask</span><span class="tag">REST APIs</span></div></article>
+          <article class="card skillbox"><h3>Databases</h3><div class="tags"><span class="tag">MySQL</span><span class="tag">SQLite</span><span class="tag">MongoDB</span></div></article>
+          <article class="card skillbox"><h3>Frontend</h3><div class="tags"><span class="tag">React.js</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Tailwind CSS</span></div></article>
+          <article class="card skillbox"><h3>Web &amp; Data</h3><div class="tags"><span class="tag">BeautifulSoup</span><span class="tag">Selenium</span><span class="tag">Web Scraping</span></div></article>
+          <article class="card skillbox"><h3>Core interests</h3><div class="tags"><span class="tag">Backend Engineering</span><span class="tag">Application Development</span><span class="tag">AI/ML Fundamentals</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">03 / Selected work</div><h2>Projects &amp; practice.</h2></div><p class="sub">A selection based on the work described in my resume. More implementation details and code links can be added as repositories become available.</p></div>
+        <div class="project-grid">
+          <article class="card project"><div class="num">PROJECT 01</div><h3>Q&amp;A Platform</h3><p>A question-and-answer web platform featuring user authentication, search and voting functionality. Developed as part of the internship experience, working across frontend, backend and database integration.</p><div class="tags"><span class="tag">Python</span><span class="tag">Web Development</span><span class="tag">Database Integration</span></div></article>
+          <article class="card project"><div class="num">PROJECT 02</div><h3>Data-driven Mini Projects</h3><p>Mini-project work focused on practical, data-driven problem-solving and strengthening programming and application-development fundamentals.</p><div class="tags"><span class="tag">Python</span><span class="tag">Problem Solving</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">04 / Experience</div><h2>Where I learned by building.</h2></div></div>
+        <div class="timeline">
+          <article class="experience">
+            <div class="meta">JUNE 2025 — SEPTEMBER 2025 · 4 MONTHS</div>
+            <h3>Python Developer Intern · Matrid Technology</h3>
+            <ul>
+              <li>Gained practical exposure to Python programming and application development.</li>
+              <li>Built a Q&amp;A platform with user authentication, search and voting functionality.</li>
+              <li>Worked across frontend, backend and database integration to support application functionality.</li>
+              <li>Explored AI/ML fundamentals and developed mini-projects focused on practical, data-driven problem-solving.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">05 / Education</div><h2>Academic foundation.</h2></div></div>
+        <div class="card edu"><div><strong>Bachelor of Technology · Computer Engineering</strong><span>Ambala College of Engineering &amp; Applied Research</span></div><div><strong>8.42 / 10 CGPA</strong><span>September 2021 – October 2024</span></div></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact">
+          <div><div class="kicker">06 / Contact</div><h2>Let's build something useful.</h2><p>Open to entry-level Python Developer and Junior Backend Developer opportunities.</p></div>
+          <div class="actions"><a class="btn primary" href="mailto:dineshlakhi433@gmail.com">Email me ↗</a><a class="btn" href="https://www.linkedin.com/in/dinesh-lakhi437/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="wrap"><span>© <span id="year"></span> Dinesh Lakhi</span><span>Designed with focus · Built for the web</span></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menu = document.getElementById('menu');
+    const links = document.getElementById('navlinks');
+    menu.addEventListener('click', () => links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+  </script>
+</body>
+</html>
